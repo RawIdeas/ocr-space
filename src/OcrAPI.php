@@ -63,7 +63,7 @@ class OcrAPI
         $lang = isset($options['lang']) ? $options['lang'] : 'eng';
         $headers = [ 'apikey' => $this->key ];
         $multipart = [
-                [ 'name' => 'language', 'contents' => 'eng' ],
+                [ 'name' => 'language', 'contents' => $lang ],
                 [ 'name' => $fldName, 'contents' => $fldValue ]
             ];
 

@@ -1,7 +1,7 @@
 <?php
 
 use Orchestra\Testbench\TestCase;
-use JFuentesTgn\OcrSpace\OcrResponse;
+use RawIdeas\OcrSpace\OcrResponse;
 
 class OcrErrorResponseTest extends TestCase
 {

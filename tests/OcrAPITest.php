@@ -1,7 +1,7 @@
 <?php
 
 use Orchestra\Testbench\TestCase;
-use JFuentesTgn\OcrSpace\OcrAPI;
+use RawIdeas\OcrSpace\OcrAPI;
 
 class OcrAPITest extends TestCase
 {

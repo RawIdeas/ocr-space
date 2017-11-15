@@ -1,7 +1,7 @@
 <?php
 
 use Orchestra\Testbench\TestCase;
-use JFuentesTgn\OcrSpace\OcrServiceProvider;
+use RawIdeas\OcrSpace\OcrServiceProvider;
 
 class OcrServiceProviderTest extends TestCase
 {
@@ -15,11 +15,11 @@ class OcrServiceProviderTest extends TestCase
 
     protected function getPackageProviders($app)
     {
-        return ['JFuentesTgn\OcrSpace\OcrServiceProvider'];
+        return ['RawIdeas\OcrSpace\OcrServiceProvider'];
     }
 
     public function testIsService()
     {
-        $this->assertTrue($this->service instanceof JFuentesTgn\OcrSpace\OcrAPI);
+        $this->assertTrue($this->service instanceof RawIdeas\OcrSpace\OcrAPI);
     }
 }

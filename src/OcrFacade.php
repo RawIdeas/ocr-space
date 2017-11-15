@@ -1,6 +1,6 @@
 <?php
 
-namespace JFuentesTgn\OcrSpace;
+namespace RawIdeas\OcrSpace;
 
 use Illuminate\Support\Facades\Facade;
 

@@ -1,14 +1,14 @@
 <?php
 
 use Orchestra\Testbench\TestCase;
-use JFuentesTgn\OcrSpace\OcrFacade;
+use RawIdeas\OcrSpace\OcrFacade;
 
 class OcrFacadeTest extends TestCase
 {
 
     protected function getPackageProviders($app)
     {
-        return ['JFuentesTgn\OcrSpace\OcrServiceProvider'];
+        return ['RawIdeas\OcrSpace\OcrServiceProvider'];
     }
 
     public function testValidFacade()

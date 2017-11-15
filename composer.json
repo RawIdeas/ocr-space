@@ -1,5 +1,5 @@
 {
-    "name": "jfuentestgn/ocr-space",
+    "name": "rawideas/ocr-space",
     "description": "Laravel OCR.space API Client",
     "keywords": ["ocr", "api", "service", "laravel"],
     "license": "MIT",
@@ -21,7 +21,7 @@
     },
     "autoload": {
         "psr-4": {
-            "JFuentesTgn\\OcrSpace\\": "src/"
+            "RawIdeas\\OcrSpace\\": "src/"
         }
     },
     "autoload-dev": {

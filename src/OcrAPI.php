@@ -8,11 +8,13 @@ class OcrAPI
 {
     private $key;
     private $url;
-    
-    public function __construct($apiKey, $url = '')
+    private $httpClientOptions;
+
+    public function __construct($apiKey, $url = '', $httpClientOptions = [])
     {
         $this->key = $apiKey;
         $this->url = $url;
+        $this->httpClientOptions = $httpClientOptions;
     }
 
     public function getApiKey()
@@ -57,15 +59,14 @@ class OcrAPI
 
     protected function parseImage($fldName, $fldValue, $options = [])
     {
-        $httpClientOptions = isset($options['httpClient']) ? $options['httpClient'] : [];
-        $client = new HttpClient($httpClientOptions);
+        $client = new HttpClient($this->httpClientOptions);
 
         $lang = isset($options['lang']) ? $options['lang'] : 'eng';
         $headers = [ 'apikey' => $this->key ];
         $multipart = [
-                [ 'name' => 'language', 'contents' => $lang ],
-                [ 'name' => $fldName, 'contents' => $fldValue ]
-            ];
+            [ 'name' => 'language', 'contents' => $lang ],
+            [ 'name' => $fldName, 'contents' => $fldValue ]
+        ];
 
         $url = $this->url == '' ? 'https://api.ocr.space/parse/image' : $this->url;
         try {

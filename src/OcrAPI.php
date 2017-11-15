@@ -57,7 +57,8 @@ class OcrAPI
 
     protected function parseImage($fldName, $fldValue, $options = [])
     {
-        $client = new HttpClient();
+        $httpClientOptions = isset($options['httpClient']) ? $options['httpClient'] : [];
+        $client = new HttpClient($httpClientOptions);
 
         $lang = isset($options['lang']) ? $options['lang'] : 'eng';
         $headers = [ 'apikey' => $this->key ];
